@@ -11,6 +11,16 @@ app.use(express.json());
 app.use(express.urlencoded({extends: true }));
 
 app.get("/", (req, res) => { 
+    const{id,token} = req.query;
+    console.log(token)
+    console.log(id)
+res.json({mensaje: "Bienvenidos a mi primer api consss express" });
+}); 
+
+app.post("/", (req, res) => { 
+    const{id,token} = req.query;
+    console.log(token)
+    console.log(id)
 res.json({mensaje: "Bienvenidos a mi primer api consss express" });
 }); 
 
